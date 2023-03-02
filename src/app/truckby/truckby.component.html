@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <button (click)="addnewproduct()" class="btn btn-primary">add new</button>
+</div>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of products; trackBy:TrackChanges">
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+        </tr>
+    </tbody>
+</table>

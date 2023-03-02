@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-5">
+            <form #formregister="ngForm">
+                <h2>register user</h2>
+                <dl>
+                    <dt>user name</dt>
+                    <dd><input required minlength="4" name="username"
+                    ngModel #username="ngModel" type="text"></dd>
+                    <dd class="text-danger" *ngIf="formregister.submitted||
+                    (username.touched && username.invalid)">
+                    <span *ngIf="username.errors?.['required']">
+                        user name required
+                    </span>
+                     <span *ngIf="username.errors?.['minlength']">
+                        user name too short
+                    </span>
+                </dd>
+                <dt>
+                    mobile
+                </dt>
+                <dd><input required type="text" name="mobile" ngModel #mobile="ngModel"></dd>
+                <dd class="text-danger" *ngIf="formregister.submitted ||(mobile.touched && mobile.invalid)">
+                    <span *ngIf="mobile.errors?.['required']">mobile required</span>
+                </dd>
+                <dt>your city</dt>
+                <dd>
+                    <select (change)="citychanged($event)" name="city" ngModel #city="ngModel">
+                        <option value="-1">select your city</option>
+                        <option value="delhi">delhi</option>
+                        <option value="hyd">hyd</option>
+                    </select>
+
+                </dd>
+                <dd *ngIf="iscityinvalid" class="text-danger">
+                    <span>please select your city</span>
+                </dd>
+                <dt>verify code[enter any even number]</dt>
+                <dd>
+                    <input (blur)="verifyeven($event)" name="even" ngModel
+                    #even="ngModel" type="text">
+
+                </dd>
+                <dd class="text-danger" *ngIf="iseveninvalid">
+                    <span>code-required-must be an even number</span>
+                </dd>
+                </dl>
+                <button type="submit">register</button>
+            </form>
+        </div>
+        <div class="col-7">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container-fluid bg-danger m-4 p-4 text-white"
+style="height:400px;width: 1000px;">
+<h2>parent component</h2>
+<div class="mb-3">
+    <button (click)="sendclick()" class="btn btn-dark">send message to child</button>
+    {{message}}-{{name}}:{{price}}
+</div>
+<app-child [obj]="objecttochild" [message]="messagetochild"
+(childcomponentsendobjectclick)="sendobject($event)"
+(childcomponentclick)="sendtoparent($event)"
+></app-child>
+</div>

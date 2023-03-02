@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-5">
+            <form #formregister="ngForm">
+                <dl>
+                    <dt>user name</dt>
+                    <dd><input required minlength="4" name="username" ngModel
+                    #username="ngModel" type="text"></dd>
+                    <dd class="text-danger" *ngIf="formregister.submitted||
+                    
+                    (username.touched && username.invalid)">
+                    <span *ngIf="username.errors?.['required']">user name required</span>
+                    <span *ngIf="username.errors?.['minlength']">user name too short</span>
+                </dd>
+                <dt>mobile</dt>
+                <dd><input required type="text" name="mobile" ngModel #mobile=ngModel></dd>
+                <dd class="text-danger" *ngIf="formregister.submitted||(mobile.touched)">
+                <span *ngIf="mobile.errors?.['required']">mobile required</span>
+                </dl>
+                <p>{{formregister.value.username}}</p>
+                <button type="submit">register</button>
+            </form>
+        </div>
+    </div>
+</div>

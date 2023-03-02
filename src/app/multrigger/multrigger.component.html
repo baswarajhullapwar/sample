@@ -1,0 +1,19 @@
+<div class="container-fluid text-center">
+    <img src="assets/baswa image jpeg"[@zoomimage]="animationstate"
+    width="100" height="100">
+    <div class="mb-3 mt-3">
+        <div class="btn-group">
+            <button (click)="zoomoutclick()" class="btn btn-primary">-</button>
+            <button (click)="zoomclick()" class="btn btn-dark"></button>
+            <button (click)="zoominclick()" class="btn btn-primary">+</button>
+        </div>
+    </div>
+</div>
+<div class="d-flex container-fluid justify-content-center align-items-center"
+style="height: 400px;">
+<div>
+    <div>
+        <h1 [@zoom]="animationstate">welcome to angular</h1>
+    </div>
+</div>
+</div>

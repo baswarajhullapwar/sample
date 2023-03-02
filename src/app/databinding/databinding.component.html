@@ -1,0 +1,17 @@
+<div>
+    <h2>Table</h2>
+    <table [border]="tableborder" [width]="tablewidth" [attr.height]="tableheight">
+        <tr>
+            <td>{{product.Name}}</td>
+        </tr>
+    </table>
+    <h2>product detail</h2>
+    <dl>
+        <dt>name</dt>
+        <dd>{{product.Name}}</dd>
+        <dt>price</dt>
+        <dd>{{product.price}}</dd>
+        <dt>stock</dt>
+        <dd><input type="checkbox" [checked]="product.stock">available</dd>
+    </dl>
+</div>

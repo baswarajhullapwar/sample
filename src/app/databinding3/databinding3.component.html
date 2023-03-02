@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <h2>product details</h2>
+    <div>
+        <input type="range" [(ngModel)]="productId" min="1" max="20" value="1"
+        class="form-range">
+    </div>
+    <div class="card m-3 p-3 w-50">
+        <img [src]="product.image" height="200" class="card-img-top">
+    </div>
+    <div class="card-header" style="height: 140px;">
+        <h3>{{product.title}}</h3>
+        <p>{{product.price}}</p>
+        <div class="card-body">
+        <p>{{product.description}}</p>
+        </div>
+        <span class="bi bi-star-fill text-success"></span>
+        <p>{{product.rating.rate}}</p>
+        <span class="text-light"> {{product.rating.count}}></span>
+    </div>
+</div>

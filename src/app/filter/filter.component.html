@@ -1,0 +1,15 @@
+<div style="text-align: left; font-size: 25px;">
+    <h3>product categories</h3>
+    <ul class="list-unstyled">
+        <li><button (click)="filterbuttonclick($event)" name="all"
+        class="btn btn-link">All[{{allcount}}]</button></li>
+         <li><button (click)="filterbuttonclick($event)" name="electronics"
+        class="btn btn-link">electronics[{{electronicscount}}]</button></li>
+         <li><button (click)="filterbuttonclick($event)" name="jewellary"
+        class="btn btn-link">jewellary[{{jewellarycount}}]</button></li>
+         <li><button (click)="filterbuttonclick($event)" name="mens clothing"
+        class="btn btn-link">mens[{{mensclothingcount}}]</button></li>
+          <li><button (click)="filterbuttonclick($event)" name="womens clothing"
+        class="btn btn-link">womens[{{womensclothingcount}}]</button></li>
+    </ul>
+</div>

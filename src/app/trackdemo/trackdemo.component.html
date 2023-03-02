@@ -1,0 +1,22 @@
+<div>
+    <div class="d-flex flex-wrap m-3">
+        <div class="card m-2 p-2" *ngFor="let item of products" style="width: 400px;">
+            <img [src]="item.photo" height="200px" class="card-img-top">
+            <div class="card-header">
+                <h3>{{item.name}}</h3>
+            </div>
+            <div class="card-footer btn-group">
+                <button (click)="likesclick(item)" class="btn btn-success">
+                    <span class="bi bi-hand-thumbs-up-fill"></span>
+                    [{{item.likes}}] like(s)
+                </button>
+                <button (click)="dislikeclick(item)" class="btn btn-danger">
+                    <span class="bi bi-hand-thumbs-down-fill"></span>
+                    [{{item.dislikes}}] dislike(s)
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+

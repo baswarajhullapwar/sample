@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <h2>shopping cart</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>price</th>
+        <th>city</th>
+        <th>delivarys status</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of shoppingcart">
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.city}}</td>
+            <td>{{item.city|i18nSelect:status}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function bodyload(){
+                document.getElementById("pic").src="assets/baswa image.jpg";
+                document.getElementById("btnregister").value="register";
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <div>
+            <img width="200" name="pic" height="200" border="1">
+        </div>
+        <div> <form name="frmregister">
+            <h2>register</h2>
+            email:<input type="button" name="btnregister">
+            <input type="email">
+            </form>
+
+        </div>
+          <div> <form name="frmlogin">
+            <h2>login</h2>
+            mobile:<input type="text">
+            <input type="button" name="btnlogin">
+            </form>
+
+        </div>
+    </body>
+</html>

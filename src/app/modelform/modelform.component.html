@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <form [formGroup]="frmregister"
+     (submit)="FormSubmit(frmregister.value)"
+   class="bg-warning p-3 w-75">
+        <h2>basic details</h2>
+        <dl>
+            <dt>name</dt>
+            <dd><input type="text" formControlName="name"></dd>
+            <dt>price</dt>
+            <dd><input type="text" formControlName="price"></dd>
+            <div formGroupName="frmstock" class="bg-info p-3 w-25">
+                <h3>stock details</h3>
+                <dl>
+                    <dt>status</dt>
+                    <dd><input type="checkbox" formControlName="status">
+                    available</dd>
+                    <dt>city</dt>
+                    <dd>
+                        <select formControlName="city">
+                            <option>delhi</option>
+                            <option>hyd</option>
+                            <option>chennai</option>
+                        </select>
+                    </dd>
+                </dl>
+
+            </div>
+        </dl>
+        <button>register</button>
+        <button (click)="updatepartial()" type="button">
+            update partial
+        </button>
+    </form>
+</div>

@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <h2>ngfor demo</h2>
+    <div>
+        <div class="col">
+            <ol>
+                <li *ngFor="let item of categories">
+                    {{item}}
+                </li>
+            </ol>
+        </div>
+        <div class="col">
+            <select class="form-select">
+                <option *ngFor="let item of categories">
+                    {{item}}
+                </option>
+            </select>
+        </div>
+        <div class="col">
+            <div class="p-4"  style="height: 80px; border: 2px solid black;
+            overflow: auto;">
+            <ul>
+                <li *ngFor="let item of categories">
+                    <input type="checkbox">{{item}}
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th>categories</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of categories">
+                        <td>{{item}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    
+
+       
+

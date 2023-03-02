@@ -1,0 +1,9 @@
+<div class="container-fluid bg-danger m-4 p-4 text-white" style="height: 400px;
+width: 1000px;">
+<h2>parent component</h2>
+<dl>
+    <dt>user name</dt>
+    <dd><input [(ngModel)]="username" type="text"></dd>
+</dl>
+<app-child1 [username]="username"></app-child1>
+</div>

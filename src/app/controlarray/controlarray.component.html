@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <form [formGroup]="frmregister" (submit)="formsubmit(frmregister.value)"
+    class="bg-warning p-3 w-75">
+        <h2>basic details</h2>
+        <dl>
+            <dt>name</dt>
+            <dd><input type="text"></dd>
+            <dt>price</dt>
+            <dd><input type="text"></dd>
+            <dt>upload photo <button type="button" (click)="addclick()"
+            class="btn btn-link">Add More</button></dt>
+            <dd *ngFor="let item of newcontrols.controls;let i=index">
+                <input type="file" name="i"><br>
+                <button (click)="removeclick(i)" class="btn btn-link">Remove</button>
+            </dd>
+            <div formGroupName="frmstock" class="bg-info p-3 w-25">
+                <h3>stock details</h3>
+                <dl>
+                    <dt>status</dt>
+                    <dd><input type="checkbox" formControlName="status">Available</dd>
+                    <dt>city</dt>
+                    <select formControlName="city">
+                        <option>delhi</option>
+                        <option>hyd</option>
+                        <option>chennai</option>
+                    </select>
+                </dl>
+            </div>
+        </dl>
+        <button>register</button>
+        <button (click)="updatepartial()" type="button">update partial</button>
+    </form>
+</div>
