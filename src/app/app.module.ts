@@ -51,6 +51,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HtmlComponent } from './html/html.component';
 import { HullappaComponent } from './hullappa/hullappa.component';
+import { TejComponent } from './tej/tej.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +100,7 @@ import { HullappaComponent } from './hullappa/hullappa.component';
     NotfoundComponent,
     HtmlComponent,
     HullappaComponent,
+    TejComponent,
   ],
   imports: [
     BrowserModule,
